@@ -34,7 +34,7 @@
 
   .headerContainer {
     /* margin-top: 50px; */
-    
+    position: relative;
     height: 90vh;
     /* aspect-ratio: 700/500;  */
     display: flex;
@@ -51,48 +51,49 @@
   .headerContainer h1 {
     justify-content: center;
     align-items: center;
-    font-size: 90px;
-    height: 60px;
-    font-weight: 50;
-    color: black;
+    font-size: 60px;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #44635F;
+    
+    font-weight: 150px;
+    color: rgb(255, 255, 255);
   }
   
-  .headerContainer p {
-    padding: 0;
-    font-size: 40px;
-    font-weight: lighter;
-    color: black;
-  }
+ 
   
   .headerContainer button {
-    color: black;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     justify-content: center;
-    background-color: #121619;
+    background-color: #44635F;
     height: 50px;
     width: 180px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
+    
+  }
+
+  .shopnow{
+    position:absolute;
+    right:    0;
+    left: 0;
+    bottom:  100px;
   }
   
   .headerContainer button:hover {
-    background-color: #07090a;
+    background-color: #F3F0EB;
+    color: #44635F;
     cursor: pointer;
     transition: 0.3s ease-in;
   }
-  
+  /* not checked 
   @media only screen and (max-width: 650px) {
     .home {
       justify-content: center;
       align-items: center;
     }
-    .headerContainer h1,
-    .headerContainer p {
-    }
-  
+
     .headerContainer {
       margin-left: 0px;
       border-radius: 10px;
@@ -128,3 +129,4 @@
       color: #121619;
     }
   }
+  */

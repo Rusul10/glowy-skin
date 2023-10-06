@@ -5,13 +5,16 @@ export default function Home() {
   return (
     <div className='home'>
       <div className='headerContainer'>
-        <div>
+        
          {/*  <img src={hero} className='hero-image'/>
           <img src={hero} className='hero-image-blurred'/> */}
-          <p>Let your skin glow with our products</p>
-        <p className='text-6xl text-red-500'>hiiiiiii</p>
+          <h1>Let your skin glow with<br></br> little love</h1>
+          <br></br>
+          
+          <div className='shopnow'>
+          <button>Shop Now</button>
+          </div>
         
-        </div>
         
       </div>
     </div>
