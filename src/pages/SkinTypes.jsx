@@ -9,7 +9,6 @@ export default function SkinTypes() {
     <div className='skintype'>
       <div className='cards'>
         <div className='darker skincard'>
-          
           <img src={dark}></img>
           <h1>
             Darker skin tones

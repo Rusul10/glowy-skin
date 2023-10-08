@@ -31,30 +31,41 @@
     filter: blur(20px);
   } */
   
-
+/* 
   .headerContainer {
-    /* margin-top: 50px; */
+    margin-top: 50px;
     position: relative;
     height: 90vh;
-    /* aspect-ratio: 700/500;  */
+    aspect-ratio: 700/500; 
     display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
     background-image: url("../assets/1400.png");
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size:cover;
+  } */
+  .hero-image{
+    height: 700px;
+ 
+    overflow: hidden;
+  }
+
+  .hero-image img{
     
+    width: 100vw;
+    height: 800px;
+
   }
   
   .headerContainer h1 {
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 300px;
+    left: 200px;
     font-size: 60px;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: #44635F;
-    
     font-weight: 150px;
     color: rgb(255, 255, 255);
   }

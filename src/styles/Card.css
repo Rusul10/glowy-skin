@@ -1,0 +1,42 @@
+
+.card{
+    background-color:rgb(255, 255, 255);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    height:375px;
+    overflow: hidden;
+   
+}
+
+.title{
+font-weight:bold;
+margin: 4px;
+}
+.name{
+    font-weight:bold;
+}
+
+.price{
+    display: block;
+}
+
+.card img{
+    width:100%;
+    height: 75%;
+    transition: 1.1s all;
+}
+
+ img :hover img {
+    transform: scale(1.2); }
+
+
+.description{
+    display: block;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
