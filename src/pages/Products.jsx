@@ -11,27 +11,18 @@ export default function Products() {
       const q=query(collection(db,'products'))
       onSnapshot(q,(data)=>{
       const finaldata=data.docs.map((doc)=>({id: doc.id, ...doc.data()}));
-      console.log(finaldata);
       setproducts(finaldata)
       } )
    },[])
-
-
   return (
-    <>
-    <h1>Products</h1>
+    <div className='productspage'>
+    <h1>All the products available here are cruelty free 🐾🐰</h1>
+    <br/>
     <div className='products'>
-      
       {products.map((product)=>(
-        /* <div>
-          <div>{product.name} </div>
-          <div>{product.price}</div>
-          <div>{product.description}</div>
-          {product.imageUrl ? <img src={product.imageUrl}/> : "no image"}
-        </div> */
         <Card product={product} />
       ))}
     </div>
-    </>
+    </div>
   )
 }

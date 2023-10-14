@@ -1,29 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../styles/Card.css'
+import { ProductContext } from '../ProductContext'
+import { Link } from 'react-router-dom'
 export default function Card({product}) {
 
+  const {addToCart}=useContext(ProductContext)
   return (
-    
-    
+    <>
       <div className='card'>
+      <Link to={`ProductBuying/${product.id}`} state={product}>
         <img src={product.imageUrl}/>
         <div className='title'>
-          <span className="name">{product.name}</span>
-          <span className='price'>{product.price}</span>
+          <h4 className="name">{product.name}</h4>
+          <h5 className='price'>{product.price}</h5>
+          
         </div>
-        
+       </Link>
       
-      {/* <div className='card2'>
-        <div>
-        <span className='description'>{product.description}</span>
-        </div>  
-        <div>
-          <button>Add to cart</button>
-        </div>
-*/}
 
       </div> 
-
+    </>
 
 
 

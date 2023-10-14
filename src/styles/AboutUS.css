@@ -1,0 +1,23 @@
+.about{
+    color: #5E5959;
+}
+.info{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 400px;
+}
+
+.rabbit{
+    padding-top: 35px;
+}
+
+.cash{
+    padding-top: 10px;
+}
+
+.caption{
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}

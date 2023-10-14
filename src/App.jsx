@@ -1,4 +1,3 @@
-
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -11,6 +10,8 @@ import AboutUs from './pages/AboutUs';
 import Search from './pages/Search';
 import Account from './pages/Account';
 import Cart from './pages/Cart';
+import { ProductContextProvider } from './ProductContext';
+import ProductBuying from './pages/ProductBuying';
 
 
 
@@ -18,23 +19,19 @@ function App() {
   return (
     <>
       <div className='App'>
-        
+        <ProductContextProvider>
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/skintypes' element={<SkinTypes/>}/>
           <Route path='/products' element={<Products/>}/>
+          <Route path='/products/ProductBuying/:id' element={<ProductBuying />}/>
           <Route path='/aboutus' element ={<AboutUs/>}/>
           <Route path='/search' element={<Search/>}/>
           <Route path='/account' element={<Account/>}/>
           <Route path='/cart' element={<Cart/>}/>
         </Routes>
-
-
-       
-       
-       
-    
+        </ProductContextProvider>       
       </div>
     </>
   );

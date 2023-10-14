@@ -4,5 +4,10 @@
     justify-content: center;
     align-items: flex-start;
     gap: 2.5rem;
+    color:  #5E5959;
+}
 
+.productspage{
+    padding-top: 20px;
+    color:  #5E5959;   
 }
