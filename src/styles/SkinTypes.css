@@ -4,6 +4,7 @@
  height: 85%;
  width: 100%;
  color: #5E5959; 
+ padding-bottom: 20px;
 }
 .cards{  
     display: flex;

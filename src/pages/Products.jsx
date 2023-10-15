@@ -1,18 +1,13 @@
 import React from 'react'
-import { useState,useEffect } from 'react';
-import { db } from '../firebaseConfig';
-import {collection,query,onSnapshot} from 'firebase/firestore'
+import {useEffect } from 'react';
+
 import '../styles/Products.css'
 import Card from '../components/Card';
 
-export default function Products() {
-  const[products,setproducts]= useState([]);
+export default function Products({products,setProduct}) {
+
   useEffect(()=>{
-      const q=query(collection(db,'products'))
-      onSnapshot(q,(data)=>{
-      const finaldata=data.docs.map((doc)=>({id: doc.id, ...doc.data()}));
-      setproducts(finaldata)
-      } )
+     console.log(products);
    },[])
   return (
     <div className='productspage'>
@@ -20,7 +15,7 @@ export default function Products() {
     <br/>
     <div className='products'>
       {products.map((product)=>(
-        <Card product={product} />
+        <Card product={product} key={product.id} setProduct={setProduct}/>
       ))}
     </div>
     </div>

@@ -1,0 +1,36 @@
+.footer{
+    position: absolute;
+    bottom: auto;
+    height: max-content;
+    background-color: #B0C9CC;  
+    width: 100%;
+    height: 100px;
+    color: white;
+}
+
+.footer img{
+    height: 100px;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+   
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: center;}
+
+.col{
+    flex-basis: 33%;
+    height: 100px;  
+   
+}
+
+.col .social-icon{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}

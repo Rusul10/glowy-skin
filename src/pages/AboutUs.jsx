@@ -32,7 +32,7 @@ export default function AboutUs() {
           </div>
           </div>
           <div className='contact'>
-          <form onSubmit={handleSubmit}>
+          <form className='formm' onSubmit={handleSubmit}>
             <h2>Contact</h2>
             <div className='field'>
               <label>

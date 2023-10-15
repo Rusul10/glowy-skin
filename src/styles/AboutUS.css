@@ -1,11 +1,15 @@
 .about{
-    color: #5E5959;
+    color: #5E5959;  
+    width: 100%;
+    padding-bottom: 20px;
 }
 .info{
     display:flex;
     flex-direction: row;
     justify-content: center;
     gap: 400px;
+   
+    height: 250px;
 }
 
 .rabbit{
@@ -20,4 +24,7 @@
     margin: auto;
     width: 60%;
     text-align: center;
+  
 }
+
+    

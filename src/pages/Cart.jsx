@@ -1,9 +1,9 @@
 import React from 'react'
-
-export default function Cart() {
+export default function Cart({cartItems}) {
+console.log(cartItems);
   return (
     <div>
-      cart
+      {cartItems[0]?.name}
     </div>
   )
 }

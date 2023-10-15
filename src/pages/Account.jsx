@@ -1,33 +1,39 @@
 import React from 'react'
+import {auth} from '../firebaseConfig'
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
+import '../styles/Account.css'
 export default function Account() {
   const [email,setEmail]= useState('');
-  const [address,setAddress]=useState('');
-  const handleSubmit = (e) => {e.preventDefault();
-      
-      alert("you're successfuly signed up"); 
+  const [password,setPassword]= useState('');
+
+  const signIn = async() => {
+    await createUserWithEmailAndPassword(auth,email,password);
      
     };
   return (
-    <div>
-      <div className='account'>
-          <form onSubmit={handleSubmit}>
+    <div className='account'>
+      <div >
+          <form className='signUp-form'>
             <h2>Sign up</h2>
             <div className='field'>
               <label>
                 Email:
               </label>
-              <input value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+              <input onChange={(e)=>{setEmail(e.target.value)}}/>
             </div>
             <div className='field'>
               <label>
-               Shipping address:
+                Password:
               </label>
-              <input value={address} onChange={(e)=>{setAddress(e.target.value)}}/>
+              <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
             </div>
-            <button type="submit" >
+           
+            <div className='field'>
+            <button type="submit" onClick={signIn} >
               Register
             </button>
+            </div>
           </form>
       </div>
     </div>

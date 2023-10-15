@@ -18,7 +18,7 @@ const navigate =useNavigate();
             <img src={hero} />
           </div>
           <h1>Let your skin glow with<br></br> little love</h1>
-          <br></br>
+          
           <div className='shopnow'>
           <button onClick={handleClick}>Shop Now</button>
           </div>

@@ -1,7 +1,6 @@
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-
 import { Route,Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -10,28 +9,39 @@ import AboutUs from './pages/AboutUs';
 import Search from './pages/Search';
 import Account from './pages/Account';
 import Cart from './pages/Cart';
-import { ProductContextProvider } from './ProductContext';
 import ProductBuying from './pages/ProductBuying';
-
-
-
+import { useState,useEffect } from 'react';
+import { db } from './firebaseConfig';
+import {collection,query,onSnapshot} from 'firebase/firestore'
 function App() {
+  const [cartItems,setCartItems]=useState([]);
+  const[products,setproducts]= useState([]);
+  const [product,setProduct]=useState() 
+  useEffect(()=>{
+    const q=query(collection(db,'products'))
+    onSnapshot(q,(data)=>{
+    const finaldata=data.docs.map((doc)=>({id: doc.id, ...doc.data()}));
+    setproducts(finaldata)
+    })},[])
+  
+  
   return (
     <>
       <div className='App'>
-        <ProductContextProvider>
+        
         <Navbar/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/:id' element={<ProductBuying product={product} cartItems={cartItems} setCartItems={setCartItems}/>}/>
           <Route path='/skintypes' element={<SkinTypes/>}/>
-          <Route path='/products' element={<Products/>}/>
-          <Route path='/products/ProductBuying/:id' element={<ProductBuying />}/>
+          <Route path='/products' element={<Products products={products} setProduct={setProduct}/>}/>
           <Route path='/aboutus' element ={<AboutUs/>}/>
-          <Route path='/search' element={<Search/>}/>
+          <Route path='/search' element={<Search products={products} setProduct={setProduct}/>}/>
           <Route path='/account' element={<Account/>}/>
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/cart' element={<Cart cartItems={cartItems}/>}/>
+          <Route path='/' element={<Home/>}/>
         </Routes>
-        </ProductContextProvider>       
+        <Footer/>
+              
       </div>
     </>
   );
