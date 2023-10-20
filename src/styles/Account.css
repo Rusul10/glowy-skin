@@ -1,8 +1,10 @@
+.account-comp{
+  height: 80vh;
+}
 .account {
     display: flex;
     flex:1;
-  height: 90%;
-   
+    height: 90%;   
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -14,9 +16,10 @@
       flex-direction: column;
       width: 480px;
       padding: 16px;
-      color: black;
+      color: #5E5959;
       border-radius: 8px;
       background-color: rgba(246, 244, 244, 0.474);
+      align-items: center;
     }
     
    .field {
@@ -29,18 +32,22 @@
     } 
     
     input{
-      border-radius: 4px;
+      border-radius: 10px;
       border: 1px solid #ccc;
       height: 32px;
       padding: 0 8px;
-      text-align: right;
+      text-align: left;
+      width: 100%;
     }
     
-    button{
-      border-radius: 5px;
-      
+    .register{
+      border-radius: 10px;
       height: 40px;  
       font-size: larger;
-      background-color: #44635F;
-    
+      background-color: #B0C9CC;
+      width: 100px;
+      text-align: center;
+      border: none;
+      color: #5E5959;
+     
     }

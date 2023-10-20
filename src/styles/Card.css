@@ -6,16 +6,18 @@
     width: 20%;
     height:375px;
     overflow: hidden;
+    background-color: #f1f0eeec;
 }
 
-.title{
+.card-title{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content:center; 
     font-weight:lighter;
-    margin: 4px;
+    padding: 4px;
     height: 30%;
+    background-color: #e9e7e3ec ;
 }
 
 .card img{

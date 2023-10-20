@@ -14,11 +14,12 @@ const navigate =useNavigate();
     <div className='home'>
       <div className='headerContainer'>
         
-        <div className='hero-image'>
-            <img src={hero} />
+          <div className='hero-image'>
+              <img src={hero} />
           </div>
-          <h1>Let your skin glow with<br></br> little love</h1>
-          
+          <div className='home-title'>
+            <h1>Let your skin glow with<br></br> little love</h1>
+          </div>
           <div className='shopnow'>
           <button onClick={handleClick}>Shop Now</button>
           </div>

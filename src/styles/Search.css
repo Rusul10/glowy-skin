@@ -1,3 +1,6 @@
+.search-comp{
+    height:90vh;
+}
 .searchbar{
     padding-top: 20vh;
     width: 40%;
@@ -9,13 +12,14 @@
 }
 
 .input-wrapper{
-    background-color: white;
+    background-color: #FCFBF9;
     border-radius: 10px;
     height: 2.5rem;
     padding: 0 15px;
     box-shadow: 0 0 8px #ddd;
     display: flex;
     align-items: center;
+    width: 55%;
 }
 
 .searchbar input{
@@ -25,6 +29,7 @@
     font-size: medium;
     width: 100%;
     margin-left: 5px;
+    text-align: left;
 }
 
 input:focus{
@@ -33,4 +38,24 @@ input:focus{
 
 #search-icon{
     color: #44635F;
+}
+
+.searchresult{
+    width: 60%;
+
+    background-color: #FCFBF9;
+    border-radius: 10px;
+}
+
+.searchresult-card img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.search-result-item{
+    display: flex;
+    align-items: center;
+
+   
 }

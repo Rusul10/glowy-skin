@@ -1,0 +1,33 @@
+.checkout-comp{
+    height: 90vh;
+    color:  #5E5959;
+}
+
+.confirm{
+    margin: 40px;
+}
+.confirm h2{
+font-style: italic;
+}
+
+.thanks{
+    width: 400px;
+    height: 400px;
+}
+.confirm p{
+    font-size: larger;
+    font-weight: 500;
+}
+
+.backhome{
+    border-radius: 10px;
+    height: 40px;  
+    background-color: #B0C9CC;
+    width: 180px;
+    text-align: center;
+    border: none;
+    color: #5E5959;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 2px;
+}

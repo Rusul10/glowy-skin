@@ -12,6 +12,7 @@ export default function Account() {
      
     };
   return (
+    <div className='account-comp'>
     <div className='account'>
       <div >
           <form className='signUp-form'>
@@ -30,12 +31,13 @@ export default function Account() {
             </div>
            
             <div className='field'>
-            <button type="submit" onClick={signIn} >
+            <button className='register' type="submit" onClick={signIn} >
               Register
             </button>
             </div>
           </form>
       </div>
+    </div>
     </div>
   )
 }

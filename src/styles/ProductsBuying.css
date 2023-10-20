@@ -1,12 +1,14 @@
 .product-info{
-    height: 91vh;
+    color: #5E5959;
+    height: 90vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0px 50px 0px 50px;
     gap: 40px;
-    text-align: left;
-    
+    text-align: left; 
 }
+
 .product-info img{
     width: 400px;
     height: 500px;
@@ -22,19 +24,26 @@
     font-weight:bolder;
     margin: 20px;
     padding: 15px;
+    border: none;
+    border-radius: 20%;
+    background-color: #B0C9CC;
+    
 }
 
 .quantity{
-
    text-align: center;
-   border: 1px solid red;
    display: table-caption;
-  
+   
 }
 
 .addtocart{
     width: 300px;
     height: 60px;
+    font-size:larger;
+    font-weight:bolder;
     border-radius: 15px;
+    background-color: #B0C9CC;
+    border: none;
+    color: #5E5959;
 }
 

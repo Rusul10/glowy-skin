@@ -10,32 +10,37 @@ const [result,setResult]=useState([]);
  useEffect(()=>{
   let newItems = products.filter((product)=>product.name.toLowerCase().includes(input.toLowerCase()))
 setResult([...newItems])
-console.log(result); 
- 
-console.log(products);
+if (input=='') 
+setResult([])
+console.log(result);
+
 } ,[input])
 
   return (
+    <div className='search-comp'>
     <div className='searchbar'>
       <div className='input-wrapper'>
         <FaSearch id="search-icon"/>
-        <input placeholder='Type to search..'
+        <input className='searchbar-input' placeholder='Type to search..'
         value={input}
         onChange={(e)=>setInput(e.target.value)}/>
       </div>
       <div className='searchresult'>
+        
         {
           result.map((item,i)=>(
             <Link to={`/${item.id}` } onClick={()=>setProduct(item)} key={i}>
             <div className='searchresult-card'>
-              <img src={item.imageUrl}/>
-              <h3>{item.name}</h3>
-              <h3>{item.price}</h3>
+              <div className='search-result-item'>
+                <img src={item.imageUrl}/>
+                <h5>{item.name}</h5>
+              </div>
             </div>
             </Link>
           ))
         }
       </div>
+    </div>
     </div>
     
   )

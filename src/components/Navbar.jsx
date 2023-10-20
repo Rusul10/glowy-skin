@@ -6,13 +6,10 @@ import acc from '../assets/account.png'
 import cart from '../assets/cart.png'
 import search from '../assets/search.png'
 
-
-
-export default function Navbar() {
+export default function Navbar({size}) {
   return (
     <div>
     <nav className="navbar">
-
       <div className='leftSide'>
         <img src={logo} alt="pic"/>
       </div>
@@ -27,7 +24,8 @@ export default function Navbar() {
         <img src={search}/>
         </Link>
         <Link to="cart"> 
-        <img src={cart}/>
+        <img className='cart-icon' src={cart}/>
+        <span className='cartitems-num'>{size}</span>
         </Link>
         <Link to="account"> 
         <img src={acc}/>
