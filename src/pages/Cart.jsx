@@ -39,13 +39,14 @@ return (
             <img src={item.imageUrl}/>
             <p>{item.name}</p>
           </div>
-          <div className='quantity-inc-dec'>
+       {/*    <div className='quantity-inc-dec'>
             <button onClick={handleChange}> + </button>
               <p>{item.amount}</p>
             <button onClick={handleChange}> - </button>
-          </div>
+          </div> */}
+          
+            <span>{item.price.toLocaleString()}</span>
           <div>
-            <span>{item.price}</span>
             <button onClick={()=>handleRemove(item.id)}>Remove</button>
           </div>
         </div>

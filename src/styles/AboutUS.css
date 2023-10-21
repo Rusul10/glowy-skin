@@ -24,64 +24,11 @@
     padding-top: 20px;
 }
 
-
-/* 
-.caption{
-    background-color: transparent;
-    width: 70%;
-    height: 125px;
-    perspective: 1000px;
-}
-
-.caption-card{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 30px;
-}
-  
-.caption:hover .caption-card{
-        transform: rotateY(180deg);
-    }
-
-.caption-front, .caption-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 30px;
-}
-  
-  .caption-front {
-    background-color: #B0C9CC; 
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-     
-  }
-  .caption-back {
-    background-color: #B0C9CC;
-    transform: rotateY(180deg);
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
- */
-
 .caption{
     background-color:#FCFBF9;
     width: 100%;
     box-shadow: 1px 2px 6px 4px rgba(48, 117, 120, 0.2);
     margin-bottom: 40px;
-
 }
 
 #scroll-container{
@@ -134,4 +81,73 @@ form{
 }
 .problem{
     height: 100px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .info{
+        display:flex;
+        flex-direction: row;
+        justify-content:center;
+        gap: 70px;
+        height: 200px;
+        font-size: x-small;
+    }
+    .rabbit{
+        padding-top: 20px;
+        width: 80px;
+        height: 70px;
+    }
+
+    .cash{
+         width: 100px;
+        height: 75px;
+        padding-top: 20px;
+    }
+
+    .caption{
+        height: 50px;
+        margin-bottom: 20px;
+        font-size: x-small;
+    }
+    #scroll-container{
+        font-size: x-small;
+    }
+     
+    #scroll-text{
+        -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      -moz-animation: my-animation 30s linear infinite;
+      -webkit-animation: my-animation 30s linear infinite;
+      animation: my-animation 30s linear infinite;
+    }
+    #rabbit-icon{
+        width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+      }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

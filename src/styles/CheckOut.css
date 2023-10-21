@@ -31,3 +31,7 @@ font-style: italic;
     font-size: large;
     letter-spacing: 2px;
 }
+
+.backhome a:visited{
+    color:  #5E5959;
+}
