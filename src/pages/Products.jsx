@@ -11,7 +11,7 @@ export default function Products({products,setProduct}) {
    },[])
   return (
     <div className='productspage'>
-    <h1>All the products available here are cruelty free 🐾🐰</h1>
+    <h2>All the products are cruelty free 🐾🐰</h2>
     <br/>
     <div className='products'>
       {products.map((product)=>(

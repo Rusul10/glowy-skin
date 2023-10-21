@@ -8,6 +8,7 @@ const [dicount,setDicount]= useState(['fall','halloween','rusul'])
 const [price,setPrice]=useState(0);
 
 console.log(cartItems);
+
 const handlePrice =()=>{
   let ans =0;
   cartItems.map((item)=>(
@@ -27,10 +28,7 @@ useEffect(()=>{
   handlePrice();
 })
 
-const handleClick =()=>{
-  if (cartItems.length ==0);
-  return;
-}
+
 console.log(cartItems.length+"heeeeeeeeeey");
 return (
   <div className='cart-comp'>
@@ -42,9 +40,9 @@ return (
             <p>{item.name}</p>
           </div>
           <div className='quantity-inc-dec'>
-            <button onClick={()=>handleChange(item.id,+1)}> + </button>
+            <button onClick={handleChange}> + </button>
               <p>{item.amount}</p>
-            <button onClick={()=>handleChange(item.id,-1)}> - </button>
+            <button onClick={handleChange}> - </button>
           </div>
           <div>
             <span>{item.price}</span>
@@ -70,7 +68,7 @@ return (
         <span> {total.toLocaleString()} IQD </span>
       </div>
       <div className='checkout'>
-        <button onClick={handleClick}>
+        <button >
           <Link to="/checkout">Checkout</Link>
         </button>
       </div>

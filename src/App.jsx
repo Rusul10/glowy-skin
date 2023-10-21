@@ -26,51 +26,49 @@ function App() {
     onSnapshot(q,(data)=>{
     const finaldata=data.docs.map((doc)=>({id: doc.id, ...doc.data()}));
     setproducts(finaldata)
-
     })},[])
   
+    
   const handleClick = (item)=>{
    let isPresent =false;
    cartItems.forEach((prd)=>{
-    if (item.id === prd.id)
-    isPresent = true;
-   })
+    if (item.id === prd.id){ 
+  /*   console.log([{...item,quantity:item.quantity+1}]);  */
+    isPresent = true;} 
+     })
     if (isPresent){
       toast.warn("this product is already in your cart")
-    return;
-  }
+     /*  console.log([{...item,quantity:1}]) */
+    return;}
 
   setCartItems([...cartItems,item]);
+  
   }
 
-  const handleChange = (item,d) =>{
-    let ind=-1;
-    cartItems.forEach((data,index)=>{
-      if (data.id === item.id)
-      ind = index;
-    });
-    const tempArr = cartItems;
-    tempArr[ind] +=d;
-    if (tempArr[ind].amount===0)
-    tempArr[ind].amount=1;
-    setCartItems([...tempArr])
-  }
-
-
+/*   const handleChange = (item) =>{
+      cartItems.forEach((prd)=>
+      {
+       (item.id === prd.id)?
+        setQuantity(quantity+1)
+    :        console.log(item.id,prd.id)
+      })
+      
+    } */
+    
   return (
     <>
       <div className='App'>
         
         <Navbar size={cartItems.length}/>
         <Routes>
-          <Route path='/:id' element={<ProductBuying product={product} cartItems={cartItems} /* setCartItems={setCartItems} */ handleClick={handleClick}/>}/>
+          <Route path='/:id' element={<ProductBuying product={product} cartItems={cartItems} handleClick={handleClick}/>}/>
           <Route path='/skintypes' element={<SkinTypes/>}/>
           <Route path='/products' element={<Products products={products} setProduct={setProduct}/>}/>
           <Route path='/aboutus' element ={<AboutUs/>}/>
           <Route path='/search' element={<Search products={products} setProduct={setProduct}/>}/>
           <Route path='/account' element={<Account/>}/>
           <Route path='/checkout' element={<CheckOut/>}/>
-          <Route path='/cart' element={<Cart cartItems={cartItems} setCartItems={setCartItems} handleChange={handleChange}/>}/>
+          <Route path='/cart' element={<Cart cartItems={cartItems} setCartItems={setCartItems}/*  handleChange={handleChange} *//>}/>
           <Route path='/' element={<Home/>}/>
         </Routes>
         <Footer/>

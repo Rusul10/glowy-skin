@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Account.css'
+import { toast } from 'react-toastify';
 export default function Account() {
   const nav= useNavigate();
   const [name,setName]= useState('');
@@ -11,7 +12,22 @@ export default function Account() {
   const [password,setPassword]= useState('');
 
   const handleSubmit = (e) => {e.preventDefault();
-  
+    if(name===""){
+      toast.error('please enter your name',{ position:'top-center'
+    });
+      return;
+    }
+    if(email===""){
+      toast.error('please enter your email',{ position:'top-center'
+    });
+      return;
+    }
+    if(password===""){
+      toast.error('please enter your password',{ position:'top-center'
+    });
+      return;
+    }
+    toast("You're signed up" ,{ position:'top-center'})
     nav("/")
   }; 
 
@@ -25,11 +41,11 @@ export default function Account() {
       <div >
           <form className='signUp-form' onSubmit={handleSubmit}>
             <h2>Sign up</h2>
-            <div className='Field'>
+            <div className='field'>
                 <label>
                   Name:
                 </label>
-                <input type="text" onChange={(e) => {setName(e.target.value)}}/>
+                <input type="text" onChange={(e) => {setName(e.target)}}/>
             </div>
             <div className='field'>
               <label>

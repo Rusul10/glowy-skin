@@ -2,24 +2,10 @@ import React from 'react'
 import { useState,useEffect } from 'react';
 import '../styles/ProductsBuying.css'
 
-export default function ProductBuying({product,cartItems, setCartItems,handleClick}) {
-
-/* 
-const params = useParams(); */
-////fetching data another time 
-
+export default function ProductBuying({product, handleClick,}) {
  useEffect(()=>{
   console.log(product);
  },[]) 
-
-
-let[quantity,setQuantity]=useState(1);
-const handleInc = () => {
-  setQuantity(quantity+1);
-};
-const handleDec = () => {
-  setQuantity(quantity-1);
-};
 
 
 return (
@@ -29,24 +15,26 @@ return (
               <img src={product?.imageUrl}/>
             </div>         
             <div className='card2'>
-              <div>
-              <h2 className="name">{product?.name}</h2>
-              </div>
-              <h4 className='price'>Price: {product?.price}</h4>
+              
+              <h3 className="name">{product?.name}</h3>
+              
+              <h5 className='price'>Price: {product?.price}</h5>
               <br/>
-              <div className='quantity'>
-                <button className='btn' onClick={handleInc}>+</button>
-                {quantity}           
-                <button className='btn' onClick={handleDec}>-</button>
-                {/* <button className='addtocart' onClick={()=>setCartItems((prev)=>[...prev,product])}>Add to cart</button> */}
-                <button className='addtocart' onClick={()=>handleClick(product)}>Add to cart</button>
-              </div> 
-              <br/>
-              <div  className='description'>
+             {/*  <div className='quantity'>
+                <button className='btn' >+</button>
+              { {quantity} }
+                <button className='btn' onClick={handleChange} >-</button>
+                {<button className='addtocart' onClick={()=>setCartItems((prev)=>[...prev,product])}>Add to cart</button>}
+                
+              </div>  */}
+              
                   <h4>Description:</h4>
-                  <br/>
                   {product?.description}
-              </div>  
+                  <br/>
+                  <br/>
+              <div id='addbutton'>
+                 <button className='addtocart' onClick={()=>handleClick(product)}>Add to cart</button>
+              </div>
             </div>
         </div> 
     </div>

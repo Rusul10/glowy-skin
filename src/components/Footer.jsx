@@ -8,10 +8,10 @@ export default function Footer() {
     <div className='footer'>
       <div className='row'>
         <div className='col social-icon'>
-          <SocialIcon bgColor="white" fgColor=" #B0C9CC" url="www.instagram.com" />
-          <SocialIcon bgColor="white" fgColor=" #B0C9CC" url="www.facebook.com" />
-          <SocialIcon bgColor="white" fgColor=" #B0C9CC" url="www.snapchat.com" />
-          <SocialIcon bgColor="white" fgColor=" #B0C9CC" url="www.twitter.com" />
+          <SocialIcon id='social-icon' bgColor="white" fgColor=" #B0C9CC" url="www.instagram.com" />
+          <SocialIcon id='social-icon' bgColor="white" fgColor=" #B0C9CC" url="www.facebook.com" />
+          <SocialIcon id='social-icon' bgColor="white" fgColor=" #B0C9CC" url="www.snapchat.com" />
+          <SocialIcon id='social-icon' bgColor="white" fgColor=" #B0C9CC" url="www.twitter.com" />
         </div>
         <div className='col'>
           <img src={logo} alt="png" />

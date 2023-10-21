@@ -10,12 +10,11 @@
   }
   
   .navbar .leftSide {
-    flex: 20%;
+    flex: 35%;
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: 5px;
-  
+    padding-left: 20px;
   }
   
   .navbar .leftSide img {
@@ -23,24 +22,24 @@
   }
   
   .navbar .rightSide {
-    flex: 100%;
+    flex: 80%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:space-between;
     font-family: 'arima';
     font-weight: bold;
     font-size: large;
   }
-  .navbar .right{
+/*   .navbar .right{
     flex: 40%;
     height: 100%;
     display: flex;
     align-items:center;
     justify-content:right;
-  }
+  } */
 
-  .navbar .right img{
+.rightSide img{
     width: 30px;
     height: 30px;
   }
@@ -58,33 +57,43 @@
     cursor: pointer;
   }
   
-  .navbar .rightSide svg {
-    font-size: 40px;
+  .navbar .rightSide {
+    font-size: 20px;
   }
   
   .navbar #open {
     padding-left: 0px;
   }
+  
   .navbar #open img {
     display: none;
   }
   
-  .navbar #close img {
+   .navbar #close img {
     display: inherit;
-  }
+   }
   
   .navbar #open .hiddenLinks {
-    display: inherit;
-    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: smaller;
   }
-  
+
+  .hidden1 , .hidden2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+  }
   .navbar #close .hiddenLinks {
     display: none;
   }
   
   .navbar #open a {
     width: 70px;
-    margin: 5px;
+    margin: 2px;
   }
 
   .cart-icon{
@@ -99,11 +108,27 @@
     height: 23px;
   }
 
+#fc-Menu{
+  border: none;
+  background-color: none;
+  width: 50px;
+  height: 30px;
+}
+
+.fc-Menu{
+  border: none;
+  background-color: transparent;
+}
 
 
   @media only screen and (max-width: 900px) {
     .navbar .rightSide a {
-      width: 70px;
+      width: 40px;
+      font-size: medium;
+    }
+    .navbar .rightSide .part2 img{
+      width: 20px;
+      height: 20px;
     }
     .navbar .leftSide {
       padding-left: 50px;
@@ -123,6 +148,10 @@
     .navbar .rightSide button {
       display: inherit;
     }
+    .navbar .leftSide img {
+      width: 100px;
+      height: 100px;
+    }
   }
   
   @media only screen and (min-width: 600px) {
@@ -130,7 +159,8 @@
       display: none;
     }
   
-    .hiddenLinks {
+     .hidden1, .hidden2 {
       display: none;
     }
+   
   }
